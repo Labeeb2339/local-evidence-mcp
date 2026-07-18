@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "embeddings": {
+    "enabled": true,
+    "provider": "ollama",
+    "endpoint": "http://127.0.0.1:11434/api/embeddings",
+    "model": "nomic-embed-text",
+    "timeout_seconds": 3
+  },
+  "read": {
+    "files": [
+      "lessons.md"
+    ],
+    "globs": [
+      "notes/*.md",
+      "writeups/*.md"
+    ]
+  },
+  "excluded": [
+    "private/*",
+    "*.key",
+    "*.pem",
+    ".env"
+  ],
+  "write": {
+    "create_only_directory": "writeups",
+    "append_only_file": "lessons.md"
+  },
+  "limits": {
+    "max_read_bytes": 131072,
+    "max_search_results": 8,
+    "max_write_bytes": 32768,
+    "max_index_files": 250,
+    "max_chunk_characters": 1800
+  }
+}

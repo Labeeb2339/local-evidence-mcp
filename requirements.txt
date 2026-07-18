@@ -1,0 +1,2 @@
+# Runtime dependencies: none. Local Evidence MCP uses the Python standard library.
+

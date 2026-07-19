@@ -44,7 +44,7 @@ unauthenticated loopback embedding endpoint.
 Requirements: Python 3.11 or newer. Ollama is optional.
 
 ```powershell
-git clone https://github.com/<your-account>/local-evidence-mcp.git
+git clone https://github.com/Labeeb2339/local-evidence-mcp.git
 cd local-evidence-mcp
 ./run_server.cmd --check
 ```

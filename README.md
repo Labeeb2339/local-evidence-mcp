@@ -1,8 +1,7 @@
 # Local Evidence MCP
 
-A local-first Model Context Protocol (MCP) server for retrieving a deliberately
-small evidence set and recording reviewed conclusions without giving an agent
-general filesystem access.
+I built Local Evidence MCP to retrieve a deliberately small evidence set and
+record reviewed conclusions without giving an agent general filesystem access.
 
 This repository demonstrates a practical RAG and agent-harness pattern:
 

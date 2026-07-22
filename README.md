@@ -1,5 +1,14 @@
 # Local Evidence MCP
 
+**A policy-constrained local evidence boundary for MCP clients.**
+
+![Local Evidence MCP boundary map showing three allowlisted example files, five advertised tools, zero execution capabilities, and an 18-test control inventory](docs/assets/local-evidence-boundary.svg)
+
+*Generated from the checked-in synthetic policy, server tool definitions, and
+named test inventory. It shows the intended capability boundary; the 18 tests
+are executable checks, not a completeness score or an independent security
+audit.*
+
 I built Local Evidence MCP to retrieve a deliberately small evidence set and
 record reviewed conclusions without giving an agent general filesystem access.
 
@@ -156,6 +165,7 @@ The full suite uses only the standard library:
 ```powershell
 $env:PYTHONPATH = "src"
 python -m unittest discover -s tests -v
+python scripts/generate_readme_assets.py --check
 ```
 
 CI runs the suite on Python 3.11, 3.12, and 3.13 and performs a Gitleaks scan.

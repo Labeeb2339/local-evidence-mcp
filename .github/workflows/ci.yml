@@ -20,11 +20,13 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Compile
-        run: python -m compileall -q src tests
+        run: python -m compileall -q src tests scripts
       - name: Test
         env:
           PYTHONPATH: src
         run: python -m unittest discover -s tests -v
+      - name: Verify code-derived README graphic
+        run: python scripts/generate_readme_assets.py --check
 
   secrets-scan:
     runs-on: ubuntu-latest
